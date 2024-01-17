@@ -35,6 +35,9 @@
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
@@ -110,6 +113,7 @@
     <Compile Include="T_User.cs">
       <DependentUpon>PostModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserDAO.cs" />
     <Compile Include="Video.cs">
       <DependentUpon>PostModel.tt</DependentUpon>
     </Compile>
