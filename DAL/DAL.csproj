@@ -57,7 +57,6 @@
     <Compile Include="Category.cs">
       <DependentUpon>PostModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Comment.cs">
       <DependentUpon>PostModel.tt</DependentUpon>
     </Compile>
