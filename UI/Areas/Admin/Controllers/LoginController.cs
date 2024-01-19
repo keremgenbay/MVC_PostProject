@@ -26,6 +26,11 @@ namespace UI.Areas.Admin.Controllers
                 UserDTO user = userbll.GetUserWithUsernameAndPassword(model);
                 if (user.ID != 0)
                 {
+                    UserStatic.UserID = user.ID;
+                    UserStatic.isAdmin=user.isAdmin;
+                    UserStatic.NameSurname = user.Name;
+                    UserStatic.ImagePath = user.ImagePath;
+                    LogBLL.AddLog(General.ProcessType.Login, General.TableName.Login, 12);
                     return RedirectToAction("Index", "Post");
                 }
                 else
