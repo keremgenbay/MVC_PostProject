@@ -23,5 +23,26 @@ namespace BLL
             LogDAO.AddLog(General.ProcessType.MetaAdd,General.TableName.Meta,metaID);
             return true;
         }
+
+        public List<MetaDTO> GetMetaData()
+        {
+            List<MetaDTO> dtolist= new List<MetaDTO>();
+            dtolist = metadao.GetMetaData();
+            return dtolist;
+        }
+
+        public MetaDTO GetMetaWithID(int ID)
+        {
+            MetaDTO metadto = new MetaDTO();
+            metadto = metadao.GetMetaWithID(ID);
+            return metadto;
+        }
+
+        public bool UpdateMeta(MetaDTO model)
+        {
+            metadao.UpdateMeta(model);
+            LogDAO.AddLog(General.ProcessType.MetaUpdate, General.TableName.Meta, model.MetaID);
+            return true;
+        }
     }
 }

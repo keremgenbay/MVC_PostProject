@@ -15,6 +15,9 @@
     <link href="~/Areas/Admin/Content/CSS/adminlte.min.css" rel="stylesheet" />
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link href="~/Areas/Admin/Content/CSS/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/CSS/responsive.bootstrap4.min.css" rel="stylesheet" />
 </head>
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
@@ -711,5 +714,27 @@
     <script src="~/Areas/Admin/Content/JS/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="~/Areas/Admin/Content/JS/demo.js"></script>
+    <script src="~/Areas/Admin/Content/JS/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Areas/Admin/Content/JS/dataTables.responsive.min.js"></script>
+    <script src="~/Areas/Admin/Content/JS/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Admin/Content/JS/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+                "ordering": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
 </body>
 </html>
